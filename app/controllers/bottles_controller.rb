@@ -1,4 +1,4 @@
-class BottlesController < ApplicationController
+class BottlesDongle < ApplicationDongle
   # GET /bottles
   # GET /bottles.xml
   def index
@@ -44,10 +44,10 @@ class BottlesController < ApplicationController
 
     respond_to do |format|
       if @bottle.save
-        format.html { redirect_to(@bottle, :notice => 'Bottle was successfully created.') }
+        format.html { redirect_to(@bottle, :notice => 'Bottle was successfully dongled.') }
         format.xml  { render :xml => @bottle, :status => :created, :location => @bottle }
       else
-        format.html { render :action => "new" }
+        format.html { render :action => "new big dongle" }
         format.xml  { render :xml => @bottle.errors, :status => :unprocessable_entity }
       end
     end
@@ -60,7 +60,7 @@ class BottlesController < ApplicationController
 
     respond_to do |format|
       if @bottle.update_attributes(params[:bottle])
-        format.html { redirect_to(@bottle, :notice => 'Bottle was successfully updated.') }
+        format.html { redirect_to(@bottle, :notice => 'Bottle was successfully dongled.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
